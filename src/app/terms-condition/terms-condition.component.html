@@ -1,0 +1,39 @@
+<app-main-header></app-main-header>
+
+<div class="main">
+  <h1>Terms and Conditions</h1>
+
+  <div class="term">
+    <label>
+      <input type="checkbox" [(ngModel)]="accepted" [disabled]="!showCheckbox"> Accept
+    </label>
+    <br>
+    <button class="btn btn-primary" (click)="openPopup()">Accept and Continue</button>
+    <button class="btn btn-primary" [disabled]="!accepted" (click)=" navigateToPayment()">Next</button>
+  </div>
+
+  <div *ngIf="showPopup" class="popup">
+    <div class="popup-content">
+      <h2>Terms and Conditions</h2>
+      <div><strong>Eligibility:</strong> Applicants must be [specific criteria, e.g.,
+        high school graduates, enrolled in specific course/program],
+        and demonstrate [academic merit/financial need].</div>
+      <div><strong>Application:</strong> Complete the online form by [deadline] and submit
+        required documents (transcripts, essays, etc.).</div>
+      <div><strong>Selection:</strong> Awards based on [merit/need]. Decisions are final.</div>
+      <div><strong>Award:</strong> Amount is [specific amount], disbursed [lump sum/installments].</div>
+      <div><strong>Obligations:</strong> Maintain [GPA/academic standard], provide progress reports,
+        and participate in required activities.</div>
+      <div><strong>Termination:</strong> May occur if terms are violated, requiring potential repayment.</div>
+      <div><strong>General:</strong> Non-transferable; terms subject to change; acceptance allows promotional use of
+        recipient’s details.</div>
+
+        <button class="btn btn-primary" (click)="closePopup()">Close</button>
+      <button class="btn btn-primary" (click)="acceptTermsInPopup()">Accept</button>
+      
+    </div>
+  </div>
+</div> 
+<app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>

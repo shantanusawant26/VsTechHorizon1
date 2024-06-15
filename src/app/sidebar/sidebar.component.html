@@ -1,0 +1,19 @@
+<div class="container">
+  <div [ngStyle]="{'width.px': isOpen ? 200 : 50}" class="sidebar">
+    <div class="top_section">
+      <h1 *ngIf="isOpen" class="logo">Vendor</h1>
+      <div [ngStyle]="{'marginLeft.px': isOpen ? 50 : 0}" class="bars">
+        <fa-icon [icon]="faBars" (click)="toggle()"></fa-icon>
+      </div>
+    </div>
+    <ng-container *ngFor="let item of menuItem">
+      <a [routerLink]="item.path" class="link" routerLinkActive="active">
+        <fa-icon *ngIf="item.icon" [icon]="item.icon"></fa-icon>
+        <div *ngIf="isOpen" class="link_text">{{ item.name }}</div>
+      </a>
+    </ng-container>
+  </div>
+  <main>
+    <ng-content></ng-content>
+  </main>
+</div>

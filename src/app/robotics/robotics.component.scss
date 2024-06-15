@@ -1,0 +1,124 @@
+#project-container {
+  width: 100%;
+  height: auto;
+}
+
+#pro-hed {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 80px;
+  height: 80px;
+  font-size: 65px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Project-odd, #Project-even {
+  height: auto;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 50px;
+  padding-top: 80px;
+  border: 1px solid #007bff;
+  box-shadow: 0px 0px 10px;
+}
+
+#pro-odd-cont, #pro-even-cont {
+  height: auto;
+  width: 70%;
+  margin-left: 15%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#project-odd-tit, #project-even-tit {
+  height: auto;
+  width: 50%;
+  padding: 20px;
+}
+
+#project-odd-img, #project-even-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  
+  // align-items: center;
+}
+
+#project-odd-img img, #project-even-img img {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+#project-odd-tit h3, #project-even-tit h3 {
+  font-size: 30px;
+}
+
+#project-odd-tit p, #project-even-tit p {
+  font-size: 18px;
+}
+
+/* For tablets (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #pro-hed {
+    font-size: 50px;
+  }
+
+  #Project-odd, #Project-even {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  #pro-odd-cont, #pro-even-cont {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #project-odd-img img, #project-even-img img {
+    width: 200px;
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  #pro-odd-cont, #pro-even-cont {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  #project-odd-tit, #project-even-tit {
+    width: 100%;
+    order: 2; 
+    // text-align: center;
+    margin-top: 20px;
+  }
+
+  #project-odd-img, #project-even-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 1; 
+  }
+
+  #project-odd-img img, #project-even-img img {
+    width: 250px;
+    height: 150px;
+  }
+
+  #pro-hed {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #Project-odd, #Project-even {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 20px;
+  }
+}

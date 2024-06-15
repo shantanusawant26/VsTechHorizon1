@@ -1,0 +1,68 @@
+/* Container for the entire layout */
+.container {
+    display: flex;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    height: 100vh; /* Full height of the viewport */
+    background-color: #333; /* Dark background color */
+    color: white; /* Text color */
+    transition: width 0.3s; /* Smooth transition for width change */
+    overflow: hidden; /* Hide overflow to keep content within the sidebar */
+    position: fixed; /* Fix sidebar to the left side of the screen */
+    left: 0; /* Align to the left */
+    top: 50px; /* Align to the top */
+  }
+  
+  /* Top section of the sidebar */
+  .top_section {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    padding: 10px; /* Padding around the section */
+  }
+  
+  /* Logo styles */
+  .logo {
+    font-size: 20px; /* Font size for the logo */
+  }
+  
+  /* Bars (hamburger icon) styles */
+  .bars {
+    cursor: pointer; /* Cursor style for the icon */
+  }
+  
+  /* Link styles */
+  .link {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    padding: 10px; /* Padding around the link */
+    color: white; /* Text color */
+    text-decoration: none; /* No underline for links */
+  }
+  
+  .link:hover {
+    background-color: #444; /* Background color on hover */
+  }
+  
+  .link_text {
+    margin-left: 10px; /* Margin between icon and text */
+  }
+  
+  /* Icon styles */
+  .icon {
+    margin-right: 10px; /* Margin between icons */
+  }
+  
+  /* Active link styles */
+  .active {
+    background-color: #555; /* Background color for active link */
+  }
+  
+  /* Main content area */
+  main {
+    margin-left: 200px; /* Left margin to accommodate the sidebar */
+    padding: 20px; /* Padding around the main content */
+    flex: 1; /* Flex to fill the remaining space */
+  }
+  

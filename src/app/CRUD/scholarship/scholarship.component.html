@@ -1,0 +1,112 @@
+<app-main-header></app-main-header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Scholarship Information</title>
+</head>
+<body>
+  <div>
+    <h2>Scholarship Information</h2>
+  </div>
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Sr.No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Date Of Birth</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">School</th>
+        <th scope="col">Transaction Id</th>
+        <th scope="col">Payment Sleep</th>
+        <th scope="col">Mark Sheet</th>
+        <th scope="col">Submit Date & Time</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let scholarship of scholarships">
+        <td>{{scholarship.scholarshipId}}</td>
+        <td>{{scholarship.name}}</td>
+        <td>{{scholarship.email}}</td>
+        <td>{{scholarship.number}}</td>
+        <td>{{scholarship.dateOfBirth}}</td>
+        <td>{{scholarship.gender}}</td>
+        <td>{{scholarship.address}}</td>
+        <td>{{scholarship.school}}</td>
+        <td>{{scholarship.transactionId}}</td>
+        <td><a href="http://localhost:3006{{scholarship.screenshot}}">View</a></td>
+        <td><a href="http://localhost:3006{{scholarship.file1}}">View</a></td>
+        <td>{{scholarship.submitDate}}</td>
+        <td>
+          <span *ngIf="!scholarship.status || scholarship.status === 'pending'" class="button-group">
+            <button (click)="scholarshipFormAccepted(scholarship)" id="accept">Accept</button>
+            <button (click)="scholarshipFormRejected(scholarship)" id="reject">Reject</button>
+          </span>
+          <span *ngIf="scholarship.status === 'accepted'">Accepted</span>
+          <span *ngIf="scholarship.status === 'rejected'">Rejected</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-chatbot></app-chatbot>
+<app-whatsapp></app-whatsapp>
+<app-footer></app-footer>
+</body>
+</html>
+
+<!-- <div>
+  <h2>Scholarship Information</h2>
+</div>
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Sr.No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Date Of Birth</th>
+      <th scope="col">Gender</th>
+
+      <th scope="col">Address</th>
+      <th scope="col">School</th>
+      <th scope="col">Transaction Id</th>
+
+      <th scope="col"> Payment Sleep</th>
+      <th scope="col"> Mark Sheet</th>
+      <th scope="col">Submit Date & Time</th>
+      <th scope="col">Status </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let scholarship of scholarships">
+      <td>{{scholarship.scholarshipId}}</td>
+      <td>{{scholarship.name}}</td>
+      <td>{{scholarship.email}}</td>
+      <td>{{scholarship.number}}</td>
+      <td>{{scholarship.dateOfBirth}}</td>
+      <td>{{scholarship.gender}}</td>
+      <td>{{scholarship.address}}</td>
+      <td>{{scholarship.school}}</td>
+      <td>{{scholarship.transactionId}}</td>
+      <td><a href="http://localhost:3006{{scholarship.screenshot}}">View</a></td>
+      <td><a href="http://localhost:3006{{scholarship.file1}}">View</a></td>
+      <td>{{scholarship.submitDate}}</td>
+      <td>
+        <span *ngIf="!scholarship.status || scholarship.status === 'pending'"  class="button-group">
+          <button (click)="scholarshipFormAccepted(scholarship)" id="accept">Accept</button>
+          <button (click)="scholarshipFormRejected(scholarship)" id="reject">Reject</button>
+        </span>
+        <span *ngIf="scholarship.status === 'accepted'">Accepted</span>
+        <span *ngIf="scholarship.status === 'rejected'">Rejected</span>
+      </td>
+    </tr>
+
+  </tbody>
+</table> -->
+
